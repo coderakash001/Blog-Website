@@ -1,0 +1,18 @@
+<%- include("./partials/header") %>
+<%- include("./partials/nav") %>
+
+<div class="relative posts w-full bg-white mt-10 p-10 flex gap-10 text-black border border-black">
+    <div class=" leftblog posts w-72 h-72 bg-white rounded-md py-3 flex flex-col justify-between">
+      <img src="<%=post.image%>" alt="" class="w-full h-full object-cover rounded-md"></div>
+    <div class="rightblog w-full h-80 rounded-lg  p-5 text-xl capitalize font-bold "> 
+      <h1 class="absolute top-11 fixed text-3xl font-bold"><%=post.title%></h1>
+      <br>
+      <div class=" "><%=post.description%></div>
+      <div class="likecomment absolute bottom-20 text-3xl">
+        <a href="/post/likes/<%=post._id%>"><i class="ri-thumb-up-line ">-<%=post.likes.length%></i></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<%- include("./partials/footer") %>

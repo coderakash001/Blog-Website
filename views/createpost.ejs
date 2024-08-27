@@ -1,0 +1,16 @@
+<%- include("./partials/header") %>
+
+<div class="main w-full h-screen bg-white  flex flex-col  items-center">
+    <%- include("./partials/nav") %>
+
+    <form action="/post/createpost" method="post" class="w-1/2 mt-32 p-5">
+        <h1  class="text-3xl font-semibold mb-4" >Create Blog</h1>
+        <input type="text" name="title" id="" placeholder="Title" class="w-full p-3 rounded-sm mb-2 border border-black">
+        <input type="text" name="image" id="" placeholder="Image URL" class="w-full p-3 rounded-sm mb-2 border border-black">
+        <textarea name="description" type="text" id="" placeholder="Description"  class="w-full p-3 rounded-sm mb-2 border border-black"></textarea>
+        <br>
+        <input type="submit" value="Create"  class="px-6 py-2 bg-white border border-black text-black rounded mr-20"> 
+    </form>
+
+</div>
+<%- include("./partials/footer") %>

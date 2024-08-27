@@ -1,0 +1,16 @@
+<%- include("./partials/header") %>
+
+<div class="main w-full h-[90vh] bg-white  flex flex-col  items-center">
+<%- include("./partials/nav") %>
+
+    <form action="/users/login" method="post" class="w-1/2  mt-32 p-5">
+        <h1  class="text-2xl font-semibold mb-2" >Login</h1>
+        <input type="text" name="username" id="" placeholder="username" class="w-full p-3 rounded-sm rounded-sm mb-2 border border-black">
+        <input type="password" name="password" id="" placeholder="password" class="w-full rounded-sm  p-3 rounded-sm mb-2 border border-black">
+        <a href="/forgotemail" class="text-blue-500">Forgot password?</a>
+        <br>
+        <input type="submit" value="Login" class="px-4 py-2 bg-white border border-black text-black rounded mr-20 mt-5"> 
+    </form>
+
+</div>
+<%- include("./partials/footer") %>

@@ -1,0 +1,18 @@
+ <%- include("./partials/header") %>
+
+<div class="main w-full h-screen bg-white  flex flex-col  items-center">
+    <%- include("./partials/nav") %>
+
+    <form action="/users/register" method="post" class="w-1/2 mt-32 p-5">
+        <h1  class="text-3xl font-semibold mb-2" >Register</h1>
+        <input type="text" name="fullname" id="" placeholder="fullname" class="w-full rounded-full p-3 rounded-sm mb-2 border border-black">
+        <input type="text" name="username" id="" placeholder="username" class="w-full rounded-full p-3 rounded-sm mb-2 border border-black">
+        <input type="email" name="email" id="" placeholder="email" class="w-full p-3 rounded-full rounded-sm mb-2 border border-black">
+        <input type="password" name="password" id="" placeholder="password" class="w-full rounded-full p-3 rounded-sm mb-2 border border-black">
+        <a href="/login" class="text-blue-500">Already have an accont ? Login</a>
+        <br>
+        <input type="submit" class="px-4 mt-5 py-2 border border-black text-black rounded mr-20"> 
+    </form>
+
+</div>
+<%- include("./partials/footer") %>

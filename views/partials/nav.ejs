@@ -1,0 +1,26 @@
+<%- include('./header') %>
+<nav
+  class="w-full z-3 px-4 py-2 flex gap-10 justify-between items-center cursor-pointer">
+  <section class="flex gap-10 text-xl font-bold">
+    <h1 class="text-2xl font-bold tracking-tighter">Bloggy</h1>
+  </section>
+  <section class="flex gap-10 text-xl font-semibold">
+    <a href="/">Home</a>
+    <a href="/createpost">Ceate Blog</a>
+    <a href="/allBlogs">All Blogs</a>
+    <a href="/">About</a>
+  </section>
+  <%if(user){%>
+  <section class="flex gap-2 text-xl font-semibold">
+    <a class="px-3 py-1 border border-black hover:bg-black hover:text-white text-black rounded-sm mt-1 text-[19px] font-semibold" href="/profile">Profile</a>
+    <a class="px-3 py-1 border border-black hover:bg-black hover:text-white text-black rounded-sm mt-1 text-[19px] font-semibold" href="/users/logout">Logout</a>
+  </section>
+
+  <%}else{%>
+  <section class="flex gap-2 text-xl font-semibold">
+    <a class="px-3 py-1 border border-black hover:bg-black hover:text-white text-black rounded-sm mt-1 text-[19px] font-semibold" href="/createuser">Register</a>
+    <a class="px-3 py-1 border border-black hover:bg-black hover:text-white text-black rounded-sm mt-1 text-[19px] font-semibold" href="/Login">login</a>
+  </section>
+  <%}%>
+</nav>
+<%- include('./footer') %>
